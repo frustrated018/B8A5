@@ -64,7 +64,7 @@
                     </div>
                     <!-- Card 1 -->
                     <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-3 "
-                        id="K. Accessories" onclick="addToItemList('K. Accessories'), calculation('K. Accessories')" >
+                        id="K. Accessories" onclick="addToItemList('K. Accessories'), calculation('K. Accessories')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
                             <img class="mx-auto" src="./images/prod1.png" alt="K. Accessories">
@@ -86,7 +86,8 @@
                     </div>
                     <!-- Card 2 -->
                     <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-3"
-                        id="Cutting Board Set" onclick="addToItemList('Cutting Board Set'), calculation('Cutting Board Set')">
+                        id="Cutting Board Set"
+                        onclick="addToItemList('Cutting Board Set'), calculation('Cutting Board Set')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
                             <img class="mx-auto" src="./images/prod2.png" alt="Cutting Board Set">
@@ -159,7 +160,8 @@
                     </div>
                     <!-- Card 2 -->
                     <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-3"
-                        id="Full Jersey Set" onclick="addToItemList('Full Jersey Set'),  calculation('Full Jersey Set')">
+                        id="Full Jersey Set"
+                        onclick="addToItemList('Full Jersey Set'),  calculation('Full Jersey Set')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
                             <img class="mx-auto" src="./images/prod5.png" alt="Full Jersey Set">
@@ -180,9 +182,8 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div
-                        class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-3"
-                        id="Running Shoes"    onclick="addToItemList('Running Shoes'),  calculation('Running Shoes')">
+                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-3"
+                        id="Running Shoes" onclick="addToItemList('Running Shoes'),  calculation('Running Shoes')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
                             <img class="mx-auto" src="./images/prod6.png" alt="Running Shoes">
@@ -210,9 +211,9 @@
                         <p class="text-neutral-900 text-[40px] font-semibold text-center lg:text-start">Furniture</p>
                     </div>
                     <!-- Card 1 -->
-                    <div
-                        class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-3"
-                        id="Single Relax Chair"    onclick="addToItemList('Single Relax Chair'),  calculation('Single Relax Chair')">
+                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-3"
+                        id="Single Relax Chair"
+                        onclick="addToItemList('Single Relax Chair'),  calculation('Single Relax Chair')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
                             <img class="mx-auto" src="./images/prod7.png" alt="Single Relax Chair">
@@ -233,9 +234,8 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div
-                        class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-3"
-                        id="Kids Chair"    onclick="addToItemList('Kids Chair'),  calculation('Kids Chair')">
+                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-3"
+                        id="Kids Chair" onclick="addToItemList('Kids Chair'),  calculation('Kids Chair')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
                             <img class="mx-auto" src="./images/prod8.png" alt="Kids Chair">
@@ -256,9 +256,8 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div
-                        class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-3"
-                        id="Flexible Sofa"    onclick="addToItemList('Flexible Sofa'), calculation('Flexible Sofa')">
+                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-3"
+                        id="Flexible Sofa" onclick="addToItemList('Flexible Sofa'), calculation('Flexible Sofa')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
                             <img class="mx-auto" src="./images/prod9.png" alt="Flexible Sofa">
@@ -289,9 +288,14 @@
                     <!-- Cupon input Field -->
                     <div class="w-full flex justify-center">
                         <div class="join border border-black">
-                            <input class="input input-md join-item mx-auto" placeholder="Cupon Code" />
-                            <button
-                                class="btn join-item text-white bg-pink-600 hover:bg-pink-400 text-xl">Apply</button>
+                            <input class="input input-md join-item mx-auto" placeholder="Cupon Code"
+                                id="cupon-code-input" />
+                            <!-- Apply button -->
+                            <button onclick="cuponApply()" id="btn-apply"
+                                class="btn join-item text-white bg-pink-600 hover:bg-pink-400 text-xl" disabled>
+                                Apply
+                            </button>
+
                         </div>
                     </div>
                 </div>
@@ -299,7 +303,7 @@
                 <div class="w-[342px] h-[416px] rounded-lg flex flex-col justify-between border border-black shadow-xl">
                     <!-- Cart Items section -->
                     <div class="text-neutral-900 text-xl font-medium leading-[48px] ml-7 mt-4" id="item-list">
-                       <!-- Clicked Items will be added here -->
+                        <!-- Clicked Items will be added here -->
                     </div>
                     <div class="w-[294px] h-[0px] border border-neutral-900 border-opacity-20 mx-auto"></div>
                     <!-- Cart Calculation Section -->
