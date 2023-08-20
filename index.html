@@ -314,10 +314,23 @@
                     </div>
                     <div class="w-[294px] h-[0px] border border-neutral-900 border-opacity-20 mx-auto"></div>
                     <!-- button -->
-                    <button
-                        class="btn w-[85%] bg-pink-600 hover:bg-pink-400 rounded-lg text-white whitespace-nowrap my-4 mx-auto">
-                        Make Purchase
-                    </button>
+                    <!-- Button And Modal -->
+                    <button id="make-purchase"
+                        class="btn w-[85%] bg-pink-600 hover:bg-pink-400 rounded-lg text-white whitespace-nowrap my-4 mx-auto"
+                        onclick="my_modal_1.showModal(), modalClose()">Make Purchase</button>
+                        <!-- Modal Internal content -->
+                    <dialog id="my_modal_1" class="modal">
+                        <form method="dialog" class="modal-box ">
+                            <!-- Modal Image -->
+                            <img src="./images/congo.png" alt="Congratulations" class="mx-auto">
+                            <h3 class="text-neutral-900 text-5xl font-bold text-center">Congratulations!</h3>
+                            <p class="py-4 text-center">Purchase complete.</p>
+                            <div class="modal-action">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn mx-auto bg-pink-600 hover:bg-pink-400 text-white">Go Home</button>
+                            </div>
+                        </form>
+                    </dialog>
                 </div>
             </div>
         </section>

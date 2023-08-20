@@ -65,4 +65,18 @@ function cuponApply() {
   }
 }
 
+// Make Purchase button and Modal close Function 
+
+function modalClose() {
+    const totalAmount = document.getElementById("total");
+    const discountField = document.getElementById("discount");
+    const grandTotalAmount = document.getElementById("grand-total");
+    totalAmount.innerText = '00.00';
+    discountField.innerText = '00.00';
+    grandTotalAmount.innerText = '00.00';
+}
+
+
+
+
 // Sell 200 button click
