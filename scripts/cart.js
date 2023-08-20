@@ -18,10 +18,15 @@ function calculation(itemID) {
     const grandTotalAmount = document.getElementById('grand-total');
 
     const newTotal = itemValue + parseFloat(totalAmount.innerText);
+
+
+
     const newGrandTotal = itemValue + parseFloat(grandTotalAmount.innerText);
 
 
     totalAmount.innerText = newTotal.toFixed(2); 
     grandTotalAmount.innerText = newGrandTotal.toFixed(2);
 }
+
+
 
