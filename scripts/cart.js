@@ -39,22 +39,28 @@ function calculation(itemID) {
 // Apply button click
 
 function cuponApply() {
-  const cuponCode = document.getElementById("cupon-code-input").value;
+  const cuponCodeInput = document.getElementById("cupon-code-input");
+  const cuponCode = cuponCodeInput.value;
   const totalAmount = document.getElementById("total").innerText;
   const discountField = document.getElementById("discount");
-  console.log(cuponCode);
+  const grandTotalAmount = document.getElementById("grand-total");
 
+  // Cupon validation
   if (cuponCode === "SELL200") {
     const discount = parseFloat(totalAmount) * 0.2;
     discountField.innerText = discount.toFixed(2);
+    grandTotalAmount.innerText =
+      parseFloat(grandTotalAmount.innerText) - discount;
+
+    // Clear the coupon code input
+    cuponCodeInput.value = "";
+
     return;
-  }
-  else if(cuponCode === ''){
-    alert('Please enter the Promo Code.');
+  } else if (cuponCode === "") {
+    alert("Please enter the Promo Code.");
     return;
-  }
-  else{
-    alert('Please enter a VALID Promo Code.');
+  } else {
+    alert("Please enter a VALID Promo Code.");
     return;
   }
 }
