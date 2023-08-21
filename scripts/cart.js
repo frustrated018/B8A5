@@ -37,12 +37,9 @@ function calculation(itemID) {
 
   // Activating the Make purchase button
   const makePurchaseBtn = document.getElementById("make-purchase");
-  const cuponCodeInput = document.getElementById("cupon-code-input");
   
   if (parseFloat(totalAmount.innerText) > 0) {
     makePurchaseBtn.removeAttribute("disabled");
-  } else {
-    makePurchaseBtn.setAttribute('disabled', 'true');
   }
 }
 
@@ -78,15 +75,22 @@ function cuponApply() {
 
 // Make Purchase button and Modal close Function
 
-function modalClose() {
+function goHome() {
   const totalAmount = document.getElementById("total");
   const discountField = document.getElementById("discount");
   const grandTotalAmount = document.getElementById("grand-total");
   const entryPoint = document.getElementById("item-list");
+  const makePurchaseBtn = document.getElementById("make-purchase");
   totalAmount.innerText = "00.00";
   discountField.innerText = "00.00";
   grandTotalAmount.innerText = "00.00";
   entryPoint.innerHTML = '';
+  makePurchaseBtn.setAttribute('disabled', 'true');
 }
 
 // Sell 200 button click
+
+function promo() {
+  const cuponCodeInput = document.getElementById("cupon-code-input");
+  cuponCodeInput.value = 'SELL200';
+}

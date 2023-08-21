@@ -18,6 +18,9 @@
             padding: 0;
             font-family: 'Work Sans', sans-serif;
         }
+        .no-transform{
+            text-transform: none !important;
+        }
     </style>
     <!-- Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
@@ -41,7 +44,7 @@
                 <div class="flex justify-center items-center gap-5 mx-auto">
                     <p class="text-neutral-900 text-base font-medium">Use Promo Code</p>
                     <!-- Promo code button -->
-                    <button class="bg-pink-600 rounded-lg w-32 h-10 text-white text-xl font-semibold">SELL200</button>
+                    <button onclick="promo()" class="bg-pink-600 rounded-lg w-32 h-10 text-white text-xl font-semibold hover:caret-inherit">SELL200</button>
                 </div>
             </div>
             <!-- Image section container -->
@@ -53,7 +56,7 @@
     <!-- Main section starts here -->
     <main>
         <!-- Container section -->
-        <section class="flex flex-col lg:flex-row gap-6 mt-10 mx-auto md:mx-12 lg:mx-[200px] ">
+        <section class="flex flex-col lg:flex-row gap-6 mt-10 mx-auto md:mx-12 lg:mx-[150px]">
             <!-- Left side wrapper div -->
             <div class="flex-1 grid grid-cols-1 md:grid-rows-3 gap-12">
                 <!-- Kitchenware Wrapper Div -->
@@ -63,7 +66,7 @@
                         <p class="text-neutral-900 text-[40px] font-semibold text-center lg:text-start lg:pb-6 lg:pl-3">Kitchenware</p>
                     </div>
                     <!-- Card 1 -->
-                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3 "
+                    <div class="card bg-white hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3 "
                         id="K. Accessories" onclick="addToItemList('K. Accessories'), calculation('K. Accessories')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
@@ -85,7 +88,7 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
+                    <div class="card bg-white hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
                         id="Cutting Board Set"
                         onclick="addToItemList('Cutting Board Set'), calculation('Cutting Board Set')">
                         <!-- Image -->
@@ -108,7 +111,7 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
+                    <div class="card bg-white hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
                         id="Home Cooker" onclick="addToItemList('Home Cooker'),  calculation('Home Cooker')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
@@ -137,7 +140,7 @@
                         <p class="text-neutral-900 text-[40px] font-semibold text-center lg:text-start lg:pb-6 lg:pl-3">Sportswear</p>
                     </div>
                     <!-- Card 1 -->
-                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
+                    <div class="card bg-white hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
                         id="Black Cap" onclick="addToItemList('Black Cap'),  calculation('Black Cap')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
@@ -159,7 +162,7 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
+                    <div class="card bg-white hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
                         id="Full Jersey Set"
                         onclick="addToItemList('Full Jersey Set'),  calculation('Full Jersey Set')">
                         <!-- Image -->
@@ -182,7 +185,7 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
+                    <div class="card bg-white hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
                         id="Running Shoes" onclick="addToItemList('Running Shoes'),  calculation('Running Shoes')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
@@ -211,7 +214,7 @@
                         <p class="text-neutral-900 text-[40px] font-semibold text-center lg:text-start lg:pb-6 lg:pl-3">Furniture</p>
                     </div>
                     <!-- Card 1 -->
-                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
+                    <div class="card bg-white hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
                         id="Single Relax Chair"
                         onclick="addToItemList('Single Relax Chair'),  calculation('Single Relax Chair')">
                         <!-- Image -->
@@ -234,7 +237,7 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
+                    <div class="card bg-white hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
                         id="Kids Chair" onclick="addToItemList('Kids Chair'),  calculation('Kids Chair')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
@@ -256,7 +259,7 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="card bg-base-100 hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
+                    <div class="card bg-white hover:bg-sky-100 rounded-lg border border-neutral-900 border-opacity-10 text-center mx-7 md:mx-0 lg:mx-3"
                         id="Flexible Sofa" onclick="addToItemList('Flexible Sofa'), calculation('Flexible Sofa')">
                         <!-- Image -->
                         <div class="w-[90%] h-[50%] p-8 bg-neutral-100 rounded-lg mt-4 mx-auto">
@@ -292,7 +295,7 @@
                                 id="cupon-code-input" />
                             <!-- Apply button -->
                             <button onclick="cuponApply()" id="btn-apply"
-                                class="btn join-item text-white bg-pink-600 hover:bg-pink-400 text-xl" disabled>
+                                class="btn join-item text-white bg-pink-600 hover:bg-pink-400 text-xl no-transform" disabled>
                                 Apply
                             </button>
 
@@ -316,8 +319,8 @@
                     <!-- button -->
                     <!-- Button And Modal -->
                     <button id="make-purchase" disabled
-                        class="btn w-[85%] bg-pink-600 hover:bg-pink-400 rounded-lg text-white whitespace-nowrap my-4 mx-auto"
-                        onclick="my_modal_1.showModal(), modalClose()">Make Purchase</button>
+                        class="btn w-[85%] bg-pink-600 hover:bg-pink-400 rounded-lg text-white text-xl whitespace-nowrap my-4 mx-auto no-transform"
+                        onclick="my_modal_1.showModal()">Make Purchase</button>
                         <!-- Modal Internal content -->
                     <dialog id="my_modal_1" class="modal">
                         <form method="dialog" class="modal-box ">
@@ -327,7 +330,7 @@
                             <p class="py-4 text-center">Purchase complete.</p>
                             <div class="modal-action">
                                 <!-- if there is a button in form, it will close the modal -->
-                                <button class="btn mx-auto bg-pink-600 hover:bg-pink-400 text-white">Go Home</button>
+                                <button onclick="goHome()" class="btn mx-auto bg-pink-600 hover:bg-pink-400 text-white">Go Home</button>
                             </div>
                         </form>
                     </dialog>
