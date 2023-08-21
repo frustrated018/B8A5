@@ -7,6 +7,12 @@ const makePurchaseBtn = document.getElementById("make-purchase");
 const cuponCodeInput = document.getElementById("cupon-code-input");
 const applyButton = document.getElementById("btn-apply");
 
+// Sell 200 button click
+
+function promo() {
+  cuponCodeInput.value = "SELL200";
+}
+
 // Adding to Item list function
 let entryCounter = 1;
 function addToItemList(itemID) {
@@ -80,10 +86,4 @@ function goHome() {
   entryPoint.innerHTML = "";
   makePurchaseBtn.setAttribute("disabled", "true");
   applyButton.setAttribute("disabled", "true");
-}
-
-// Sell 200 button click
-
-function promo() {
-  cuponCodeInput.value = "SELL200";
 }
