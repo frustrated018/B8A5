@@ -34,7 +34,18 @@ function calculation(itemID) {
   } else {
     applyButton.setAttribute("disabled", "true");
   }
+
+  // Activating the Make purchase button
+  const makePurchaseBtn = document.getElementById("make-purchase");
+  const cuponCodeInput = document.getElementById("cupon-code-input");
+  
+  if (parseFloat(totalAmount.innerText) > 0) {
+    makePurchaseBtn.removeAttribute("disabled");
+  } else {
+    makePurchaseBtn.setAttribute('disabled', 'true');
+  }
 }
+
 
 // Apply button click
 
@@ -65,18 +76,17 @@ function cuponApply() {
   }
 }
 
-// Make Purchase button and Modal close Function 
+// Make Purchase button and Modal close Function
 
 function modalClose() {
-    const totalAmount = document.getElementById("total");
-    const discountField = document.getElementById("discount");
-    const grandTotalAmount = document.getElementById("grand-total");
-    totalAmount.innerText = '00.00';
-    discountField.innerText = '00.00';
-    grandTotalAmount.innerText = '00.00';
+  const totalAmount = document.getElementById("total");
+  const discountField = document.getElementById("discount");
+  const grandTotalAmount = document.getElementById("grand-total");
+  const entryPoint = document.getElementById("item-list");
+  totalAmount.innerText = "00.00";
+  discountField.innerText = "00.00";
+  grandTotalAmount.innerText = "00.00";
+  entryPoint.innerHTML = '';
 }
-
-
-
 
 // Sell 200 button click
